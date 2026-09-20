@@ -6,6 +6,11 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DAC4DCC230604A100073D77C /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = DAC4DCC130604A100073D77C /* Documentation.docc */; };
+		DAC4DCC430604A860073D77C /* TestPlan.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = DAC4DCC330604A860073D77C /* TestPlan.xctestplan */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		DAC4DC78306039960073D77C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +32,8 @@
 		DAC4DC68306039950073D77C /* Pepitas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pepitas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC4DC77306039960073D77C /* PepitasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PepitasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC4DC81306039960073D77C /* PepitasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PepitasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC4DCC130604A100073D77C /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
+		DAC4DCC330604A860073D77C /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -43,6 +50,11 @@
 		DAC4DC84306039960073D77C /* PepitasUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = PepitasUITests;
+			sourceTree = "<group>";
+		};
+		DAC4DCAA306043AB0073D77C /* Previews */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Previews;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +81,9 @@
 		DAC4DC5F306039950073D77C = {
 			isa = PBXGroup;
 			children = (
+				DAC4DCC330604A860073D77C /* TestPlan.xctestplan */,
+				DAC4DCC130604A100073D77C /* Documentation.docc */,
+				DAC4DCAA306043AB0073D77C /* Previews */,
 				DAC4DC6A306039950073D77C /* Pepitas */,
 				DAC4DC7A306039960073D77C /* PepitasTests */,
 				DAC4DC84306039960073D77C /* PepitasUITests */,
@@ -101,6 +116,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				DAC4DC6A306039950073D77C /* Pepitas */,
+				DAC4DCAA306043AB0073D77C /* Previews */,
 			);
 			name = Pepitas;
 			productName = Pepitas;
@@ -197,6 +213,7 @@
 		DAC4DC66306039950073D77C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				DAC4DCC430604A860073D77C /* TestPlan.xctestplan in Resources */,
 			);
 		};
 		DAC4DC75306039960073D77C /* Resources */ = {
@@ -215,6 +232,7 @@
 		DAC4DC64306039950073D77C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
+				DAC4DCC230604A100073D77C /* Documentation.docc in Sources */,
 			);
 		};
 		DAC4DC73306039960073D77C /* Sources */ = {

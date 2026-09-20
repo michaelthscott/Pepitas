@@ -1,0 +1,44 @@
+{
+  "cards" : [
+    {
+      "back" : "Pepitas de ouro",
+      "front" : "Gold nuggets"
+    },
+    {
+      "back" : "Quase lá",
+      "front" : "Almost there"
+    },
+    {
+      "back" : "Tenho fome",
+      "front" : "I'm hungry"
+    },
+    {
+      "back" : "Uma sandes de queijo tostada sem côdea",
+      "front" : "A toasted cheese sandwich without the crusts"
+    },
+    {
+      "back" : "Estas maçãs são boas",
+      "front" : "These apples are good"
+    },
+    {
+      "back" : "É divertido fazer fotografias",
+      "front" : "It's fun to make pictures"
+    },
+    {
+      "back" : "Gosto de pintar",
+      "front" : "I love to paint"
+    },
+    {
+      "back" : "Para onde é que foi toda a luz do sol?",
+      "front" : "Where has all the sunshine gone?"
+    },
+    {
+      "back" : "Penso que pode haver aqui um problema",
+      "front" : "I think there might be a problem here"
+    },
+    {
+      "back" : "Lamento não perceber o que está a dizer",
+      "front" : "I'm sorry I don't understand what you are saying"
+    }
+  ]
+}
