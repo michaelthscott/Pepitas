@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		DAC4DC78306039960073D77C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAC4DC60306039950073D77C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAC4DC67306039950073D77C;
+			remoteInfo = Pepitas;
+		};
+		DAC4DC82306039960073D77C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAC4DC60306039950073D77C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAC4DC67306039950073D77C;
+			remoteInfo = Pepitas;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DAC4DC68306039950073D77C /* Pepitas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pepitas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC4DC77306039960073D77C /* PepitasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PepitasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC4DC81306039960073D77C /* PepitasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PepitasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DAC4DC6A306039950073D77C /* Pepitas */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Pepitas;
+			sourceTree = "<group>";
+		};
+		DAC4DC7A306039960073D77C /* PepitasTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PepitasTests;
+			sourceTree = "<group>";
+		};
+		DAC4DC84306039960073D77C /* PepitasUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PepitasUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAC4DC65306039950073D77C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		DAC4DC74306039960073D77C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		DAC4DC7E306039960073D77C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DAC4DC5F306039950073D77C = {
+			isa = PBXGroup;
+			children = (
+				DAC4DC6A306039950073D77C /* Pepitas */,
+				DAC4DC7A306039960073D77C /* PepitasTests */,
+				DAC4DC84306039960073D77C /* PepitasUITests */,
+				DAC4DC69306039950073D77C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAC4DC69306039950073D77C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAC4DC68306039950073D77C /* Pepitas.app */,
+				DAC4DC77306039960073D77C /* PepitasTests.xctest */,
+				DAC4DC81306039960073D77C /* PepitasUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAC4DC67306039950073D77C /* Pepitas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAC4DC89306039960073D77C /* Build configuration list for PBXNativeTarget "Pepitas" */;
+			buildPhases = (
+				DAC4DC64306039950073D77C /* Sources */,
+				DAC4DC65306039950073D77C /* Frameworks */,
+				DAC4DC66306039950073D77C /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				DAC4DC6A306039950073D77C /* Pepitas */,
+			);
+			name = Pepitas;
+			productName = Pepitas;
+			productReference = DAC4DC68306039950073D77C /* Pepitas.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAC4DC76306039960073D77C /* PepitasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAC4DC8C306039960073D77C /* Build configuration list for PBXNativeTarget "PepitasTests" */;
+			buildPhases = (
+				DAC4DC73306039960073D77C /* Sources */,
+				DAC4DC74306039960073D77C /* Frameworks */,
+				DAC4DC75306039960073D77C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAC4DC79306039960073D77C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DAC4DC7A306039960073D77C /* PepitasTests */,
+			);
+			name = PepitasTests;
+			productName = PepitasTests;
+			productReference = DAC4DC77306039960073D77C /* PepitasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DAC4DC80306039960073D77C /* PepitasUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAC4DC8F306039960073D77C /* Build configuration list for PBXNativeTarget "PepitasUITests" */;
+			buildPhases = (
+				DAC4DC7D306039960073D77C /* Sources */,
+				DAC4DC7E306039960073D77C /* Frameworks */,
+				DAC4DC7F306039960073D77C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAC4DC83306039960073D77C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DAC4DC84306039960073D77C /* PepitasUITests */,
+			);
+			name = PepitasUITests;
+			productName = PepitasUITests;
+			productReference = DAC4DC81306039960073D77C /* PepitasUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAC4DC60306039950073D77C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					DAC4DC67306039950073D77C = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					DAC4DC76306039960073D77C = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = DAC4DC67306039950073D77C;
+					};
+					DAC4DC80306039960073D77C = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = DAC4DC67306039950073D77C;
+					};
+				};
+			};
+			buildConfigurationList = DAC4DC63306039950073D77C /* Build configuration list for PBXProject "Pepitas" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAC4DC5F306039950073D77C;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DAC4DC69306039950073D77C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAC4DC67306039950073D77C /* Pepitas */,
+				DAC4DC76306039960073D77C /* PepitasTests */,
+				DAC4DC80306039960073D77C /* PepitasUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAC4DC66306039950073D77C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		DAC4DC75306039960073D77C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		DAC4DC7F306039960073D77C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAC4DC64306039950073D77C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		DAC4DC73306039960073D77C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		DAC4DC7D306039960073D77C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAC4DC79306039960073D77C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAC4DC67306039950073D77C /* Pepitas */;
+			targetProxy = DAC4DC78306039960073D77C /* PBXContainerItemProxy */;
+		};
+		DAC4DC83306039960073D77C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAC4DC67306039950073D77C /* Pepitas */;
+			targetProxy = DAC4DC82306039960073D77C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DAC4DC87306039960073D77C /* Debug configuration for PBXProject "Pepitas" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 953887MQL5;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DAC4DC88306039960073D77C /* Release configuration for PBXProject "Pepitas" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 953887MQL5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAC4DC8A306039960073D77C /* Debug configuration for PBXNativeTarget "Pepitas" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 953887MQL5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.michaelthscott.Pepitas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAC4DC8B306039960073D77C /* Release configuration for PBXNativeTarget "Pepitas" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 953887MQL5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.michaelthscott.Pepitas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DAC4DC8D306039960073D77C /* Debug configuration for PBXNativeTarget "PepitasTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 953887MQL5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.michaelthscott.PepitasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pepitas.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pepitas";
+			};
+			name = Debug;
+		};
+		DAC4DC8E306039960073D77C /* Release configuration for PBXNativeTarget "PepitasTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 953887MQL5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.michaelthscott.PepitasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pepitas.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pepitas";
+			};
+			name = Release;
+		};
+		DAC4DC90306039960073D77C /* Debug configuration for PBXNativeTarget "PepitasUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 953887MQL5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.michaelthscott.PepitasUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Pepitas;
+			};
+			name = Debug;
+		};
+		DAC4DC91306039960073D77C /* Release configuration for PBXNativeTarget "PepitasUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 953887MQL5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.michaelthscott.PepitasUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Pepitas;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAC4DC63306039950073D77C /* Build configuration list for PBXProject "Pepitas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAC4DC87306039960073D77C /* Debug configuration for PBXProject "Pepitas" */,
+				DAC4DC88306039960073D77C /* Release configuration for PBXProject "Pepitas" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		DAC4DC89306039960073D77C /* Build configuration list for PBXNativeTarget "Pepitas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAC4DC8A306039960073D77C /* Debug configuration for PBXNativeTarget "Pepitas" */,
+				DAC4DC8B306039960073D77C /* Release configuration for PBXNativeTarget "Pepitas" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		DAC4DC8C306039960073D77C /* Build configuration list for PBXNativeTarget "PepitasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAC4DC8D306039960073D77C /* Debug configuration for PBXNativeTarget "PepitasTests" */,
+				DAC4DC8E306039960073D77C /* Release configuration for PBXNativeTarget "PepitasTests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		DAC4DC8F306039960073D77C /* Build configuration list for PBXNativeTarget "PepitasUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAC4DC90306039960073D77C /* Debug configuration for PBXNativeTarget "PepitasUITests" */,
+				DAC4DC91306039960073D77C /* Release configuration for PBXNativeTarget "PepitasUITests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAC4DC60306039950073D77C /* Project object */;
+	validationLevel = 1;
+}
