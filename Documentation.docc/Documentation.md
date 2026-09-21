@@ -1,6 +1,6 @@
 # ``Pepitas``
 
-A simple Portuguese flashcards app.
+A simple European Portuguese flashcards app.
 
 ## Overview
 
