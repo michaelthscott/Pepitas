@@ -74,9 +74,3 @@ is written for display straight to the reader:
 | `emptyResponse` | DeepL accepted the request but returned no translation. |
 | `unexpectedStatus` | Any other non-200 status, carrying the code. |
 | `invalidEndpoint` | The request URL could not be formed. |
-
-## Topics
-
-### <!--@START_MENU_TOKEN@-->Group<!--@END_MENU_TOKEN@-->
-
-- <!--@START_MENU_TOKEN@-->``Symbol``<!--@END_MENU_TOKEN@-->
