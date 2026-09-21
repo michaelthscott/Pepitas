@@ -1,2 +1,2 @@
 # Pepitas
-European Portuguese nuggets
+A simple European Portuguese flashcards app for iOS 27.
