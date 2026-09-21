@@ -11,7 +11,7 @@ struct SettingsView: View {
     @Environment(DeepL.self) private var deepL
     @State private var authKey = ""
 
-    /// The key as it will be stored, so that stray whitespace doesn't count as a change.
+    /// The key as it will be stored, ignoring whitespace picked up while pasting.
     private var trimmedAuthKey: String {
         authKey.trimmingCharacters(in: .whitespacesAndNewlines)
     }
@@ -25,17 +25,20 @@ struct SettingsView: View {
                         .autocorrectionDisabled()
                         .textInputAutocapitalization(.never)
                         .onSubmit(save)
+                    LabeledContent("Stored key") {
+                        Text(deepL.isConfigured ? "Saved" : "None")
+                            .foregroundStyle(.secondary)
+                    }
                 } header: {
                     Text("DeepL")
                 } footer: {
-                    Text("Used to translate the front of a card into Portuguese. Create a free key at deepl.com; free keys end in \":fx\". The key is kept in the keychain.")
+                    Text("Used to translate the front of a card into Portuguese. Create a free key at deepl.com; free keys end in \":fx\". The key is kept in the keychain and isn't shown again once saved.")
                 }
 
                 Section {
                     Button("Save", action: save)
-                        .disabled(trimmedAuthKey == deepL.authKey)
+                        .disabled(trimmedAuthKey.isEmpty)
                     Button("Remove key", role: .destructive) {
-                        authKey = ""
                         deepL.authKey = ""
                     }
                     .disabled(!deepL.isConfigured)
@@ -43,14 +46,12 @@ struct SettingsView: View {
             }
             .navigationTitle("Settings")
         }
-        .onAppear {
-            authKey = deepL.authKey
-        }
     }
 
+    /// Stores the key and clears the field, so the saved key is never left on screen.
     private func save() {
         deepL.authKey = trimmedAuthKey
-        authKey = trimmedAuthKey
+        authKey = ""
     }
 }
 

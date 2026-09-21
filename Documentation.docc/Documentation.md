@@ -21,7 +21,9 @@ account and quota rather than shipped with the app.
    copy the authentication key from the account page. The free plan allows 500,000
    characters per month, which is a lot of flashcards.
 2. Open the **Settings** tab in Pepitas, paste the key into the **DeepL** field, and tap
-   **Save**. **Remove key** deletes it again.
+   **Save**. The field clears itself once the key is stored, so the key is never left on
+   screen; the **Stored key** row tells you whether one is saved. **Remove key** deletes it
+   again.
 
 The key is written to the keychain by `KeychainItem`, not to `UserDefaults` or the app
 bundle, so it is never part of the project source and survives across launches.
