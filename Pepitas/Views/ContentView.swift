@@ -11,6 +11,7 @@ import SwiftData
 enum Tabs: Hashable {
     case card
     case deck
+    case settings
 }
 
 struct ContentView: View {
@@ -28,6 +29,9 @@ struct ContentView: View {
             }
             Tab("Deck", systemImage: "square.stack", value: Tabs.deck) {
                 DeckSplitView()
+            }
+            Tab("Settings", systemImage: "gear", value: Tabs.settings) {
+                SettingsView()
             }
         }
     }

@@ -10,9 +10,11 @@ import Foundation
 struct PreviewContext {
     let deck: Deck
     let speech: Speech
+    let deepL: DeepL
     
-    init(deck: Deck, speech: Speech) {
+    init(deck: Deck, speech: Speech, deepL: DeepL) {
         self.deck = deck
         self.speech = speech
+        self.deepL = deepL
     }
 }

@@ -12,6 +12,7 @@ import SwiftData
 struct PepitasApp: App {
     @State private var deck = Deck()
     @State private var speech = Speech()
+    @State private var deepL = DeepL()
 
     var body: some Scene {
         WindowGroup {
@@ -19,5 +20,6 @@ struct PepitasApp: App {
         }
         .environment(deck)
         .environment(speech)
+        .environment(deepL)
     }
 }
