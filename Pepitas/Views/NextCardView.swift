@@ -29,7 +29,7 @@ struct NextCardView: View {
                     CardSide(text: deck.topCard?.back ?? "Sem cartão", isVisible: !showFront)
                 }
             })
-            .disabled(deck.isAlmostEmpty)
+            .disabled(deck.isEmpty)
         }
     }
 }

@@ -28,7 +28,6 @@ import SwiftData
     }
 
     var isEmpty: Bool { cards.isEmpty }
-    var isAlmostEmpty: Bool { cards.count < 2 }
     
     var topCard: Card? {
         guard !cards.isEmpty else { return nil }
