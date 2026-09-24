@@ -13,7 +13,20 @@
     "testTimeoutsEnabled" : true
   },
   "testTargets" : [
-
+    {
+      "target" : {
+        "containerPath" : "container:Pepitas.xcodeproj",
+        "identifier" : "DAC4DC76306039960073D77C",
+        "name" : "PepitasTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Pepitas.xcodeproj",
+        "identifier" : "DAC4DC80306039960073D77C",
+        "name" : "PepitasUITests"
+      }
+    }
   ],
   "version" : 1
 }
