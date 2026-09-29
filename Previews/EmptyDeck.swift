@@ -12,7 +12,7 @@ struct EmptyDeck: PreviewModifier {
     typealias Context = PreviewContext
     
     static func makeSharedContext() async throws -> Context {
-        PreviewContext(deck: Deck(isStoredInMemoryOnly: true), speech: Speech(), deepL: DeepL())
+        PreviewContext(deck: Deck(isStoredInMemoryOnly: true), speech: Speech(), deepL: DeepL.preview())
     }
     
     func body(content: Content, context: Context) -> some View {

@@ -66,9 +66,11 @@ nonisolated enum TranslationError: LocalizedError {
 
     private let session: URLSession
 
-    init(session: URLSession = .shared) {
+    /// - Parameter authKey: A key to use instead of the one in the keychain. Supplying one
+    ///   doesn't write it to the keychain, which suits previews and tests.
+    init(session: URLSession = .shared, authKey: String? = nil) {
         self.session = session
-        authKey = Self.keychainItem.read() ?? ""
+        self.authKey = authKey ?? Self.keychainItem.read() ?? ""
     }
 
     /// Translates `text` from English into European Portuguese.

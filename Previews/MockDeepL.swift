@@ -9,13 +9,6 @@ import Foundation
 
 /// Answers DeepL requests locally so translation works in previews without a key or network.
 nonisolated final class MockDeepLProtocol: URLProtocol {
-    /// A few canned translations; anything else comes back tagged so it's obviously fake.
-    private static let phrasebook = [
-        "hello": "olá",
-        "thank you": "obrigado",
-        "good morning": "bom dia",
-    ]
-
     override class func canInit(with request: URLRequest) -> Bool { true }
     override class func canonicalRequest(for request: URLRequest) -> URLRequest { request }
     override func stopLoading() {}
@@ -27,8 +20,8 @@ nonisolated final class MockDeepLProtocol: URLProtocol {
             client?.urlProtocol(self, didFailWithError: URLError(.badURL))
             return
         }
-        let english = Self.text(in: request)
-        let portuguese = Self.phrasebook[english.lowercased()] ?? "[PT] \(english)"
+        // Tag the text so the "translation" is obviously fake.
+        let portuguese = "[PT] \(Self.text(in: request))"
         let body = (try? JSONSerialization.data(withJSONObject: ["translations": [["text": portuguese]]])) ?? Data()
 
         // A short pause, on URLSession's loading thread, so the "Translating…" row is visible.
@@ -56,7 +49,7 @@ nonisolated final class MockDeepLProtocol: URLProtocol {
 }
 
 extension DeepL {
-    /// A DeepL client for previews that translates from a canned phrasebook.
+    /// A DeepL client for previews that returns the text tagged with "[PT]".
     static func preview() -> DeepL {
         let configuration = URLSessionConfiguration.ephemeral
         configuration.protocolClasses = [MockDeepLProtocol.self]

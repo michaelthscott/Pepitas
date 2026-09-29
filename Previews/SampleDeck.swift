@@ -25,7 +25,7 @@ struct SampleDeck: PreviewModifier {
             deck.container.mainContext.insert(Card(front: jsonCard.front, back: jsonCard.back))
         }
         deck.loadStoredCards()
-        return PreviewContext(deck: deck, speech: Speech(), deepL: DeepL())
+        return PreviewContext(deck: deck, speech: Speech(), deepL: DeepL.preview())
     }
     
     func body(content: Content, context: Context) -> some View {
