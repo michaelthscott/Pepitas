@@ -15,12 +15,10 @@ import SwiftData
     @ObservationIgnored var index: Array<Card>.Index = 0
     
     init(isStoredInMemoryOnly: Bool = false) {
-        let schema = Schema([
-            Card.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: isStoredInMemoryOnly) //, cloudKitDatabase: .private("iCloud.org.michaelthscott.Pepitas"))
+        let schema = Schema(versionedSchema: PepitasMigrationPlan.currentSchema)
+        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: isStoredInMemoryOnly)
         do {
-            container = try ModelContainer(for: schema, configurations: [modelConfiguration])
+            container = try ModelContainer(for: schema, migrationPlan: PepitasMigrationPlan.self, configurations: [modelConfiguration])
             loadStoredCards()
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
