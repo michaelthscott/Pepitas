@@ -26,21 +26,29 @@ struct CardEditor: View {
     var body: some View {
         Form {
             Section(header: Text("Front")) {
-                TextField("Front", text: $front, prompt: Text("English"))
+                TextField("Front", text: $front, prompt: Text("English"), axis: .vertical)
                     .focused($focusedField, equals: .front)
-                    .onSubmit {
-                        focusedField = .back
-                        translate()
+                    .submitLabel(.next)
+                    .onSubmit(submitFront)
+                    .onChange(of: front) { _, newValue in
+                        // The front is a single line, so any newline (typed or pasted) is a submit.
+                        let singleLine = newValue.filter { !$0.isNewline }
+                        guard singleLine != newValue else { return }
+                        front = singleLine
+                        submitFront()
                     }
             }
             Section(header: Text("Back")) {
-                TextField("Back", text: $back, prompt: Text("Portuguese"))
+                TextField("Back", text: $back, prompt: Text("Portuguese"), axis: .vertical)
                     .focused($focusedField, equals: .back)
-                    .onSubmit {
-                        card.front = front
-                        card.back = back
-                        deck.addCardIfNew(card)
-                        dismiss()
+                    .submitLabel(.done)
+                    .onSubmit(submitBack)
+                    .onChange(of: back) { _, newValue in
+                        // The back is a single line, so any newline (typed or pasted) is a submit.
+                        let singleLine = newValue.filter { !$0.isNewline }
+                        guard singleLine != newValue else { return }
+                        back = singleLine
+                        submitBack()
                     }
                 if isTranslating {
                     HStack {
@@ -64,6 +72,20 @@ struct CardEditor: View {
         .onDisappear {
             translation?.cancel()
         }
+    }
+
+    /// Moves on to the back of the card and translates the front.
+    private func submitFront() {
+        focusedField = .back
+        translate()
+    }
+
+    /// Saves the card and closes the editor.
+    private func submitBack() {
+        card.front = front
+        card.back = back
+        deck.addCardIfNew(card)
+        dismiss()
     }
 
     /// Fills in the back of the card with a Portuguese translation of the front.
