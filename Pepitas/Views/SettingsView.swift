@@ -32,7 +32,7 @@ struct SettingsView: View {
                 } header: {
                     Text("DeepL")
                 } footer: {
-                    Text("Used to translate the front of a card into Portuguese. Create a free key at deepl.com; free keys end in \":fx\". The key is kept in the keychain and isn't shown again once saved.")
+                    Text("Used to translate the front of a card into Portuguese. Create a free key at [deepl.com](https://www.deepl.com/pro-api); free keys end in \":fx\". The key is kept in the keychain and isn't shown again once saved.")
                 }
 
                 Section {
