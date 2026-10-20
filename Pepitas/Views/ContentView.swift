@@ -24,8 +24,6 @@ struct ContentView: View {
         TabView(selection: $selectedTab) {
             Tab("Card", systemImage: "square", value: Tabs.card) {
                 NextCardView()
-                    .frame(height:200.0)
-                    .padding()
             }
             Tab("Deck", systemImage: "square.stack", value: Tabs.deck) {
                 DeckSplitView()

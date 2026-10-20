@@ -22,6 +22,20 @@ struct DeckSplitView: View {
                     deck.deleteCards(at: indexSet)
                 }
             }
+            .overlay {
+                if deck.isEmpty {
+                    ContentUnavailableView {
+                        Label("No cards", systemImage: "square.stack")
+                    } description: {
+                        Text("Add a card with an English word or phrase and its Portuguese translation.")
+                    } actions: {
+                        Button("Add card") {
+                            createNewCard = true
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
+                }
+            }
             .toolbar {
                 ToolbarItem {
                     Button {
@@ -30,8 +44,10 @@ struct DeckSplitView: View {
                         Label("Add card", systemImage: "plus")
                     }
                 }
-                ToolbarItem {
-                    EditButton()
+                if !deck.isEmpty {
+                    ToolbarItem {
+                        EditButton()
+                    }
                 }
             }
         } detail: {

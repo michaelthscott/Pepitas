@@ -11,8 +11,36 @@ struct NextCardView: View {
     @Environment(Deck.self) private var deck
     @Environment(Speech.self) private var speech
     @State private var showFront: Bool = true
+    @State private var createNewCard: Bool = false
 
     var body: some View {
+        Group {
+            if deck.isEmpty {
+                ContentUnavailableView {
+                    Label("No cards to practise", systemImage: "square")
+                } description: {
+                    Text("Add some cards, then tap a card to see its translation.")
+                } actions: {
+                    Button("Add card") {
+                        createNewCard = true
+                    }
+                    .buttonStyle(.borderedProminent)
+                }
+            } else {
+                card
+                    .frame(height: 200.0)
+                    .padding()
+            }
+        }
+        // Attached outside the `if`, so saving the first card doesn't tear the sheet down.
+        .sheet(isPresented: $createNewCard) {
+            NavigationStack {
+                CardEditor(card: Card())
+            }
+        }
+    }
+
+    private var card: some View {
         VStack {
             Button(action: {
                 withAnimation {
