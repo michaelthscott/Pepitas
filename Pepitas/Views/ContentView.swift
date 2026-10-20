@@ -19,6 +19,7 @@ struct ContentView: View {
     @State private var clicked: Bool = false
     @State private var showFront: Bool = true
     @State private var selectedTab: Tabs = .deck
+    @State private var isShowingStoreError = false
 
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -31,6 +32,14 @@ struct ContentView: View {
             Tab("Settings", systemImage: "gear", value: Tabs.settings) {
                 SettingsView()
             }
+        }
+        .onAppear {
+            isShowingStoreError = deck.storeError != nil
+        }
+        .alert("Your cards couldn't be opened", isPresented: $isShowingStoreError) {
+            Button("OK") {}
+        } message: {
+            Text("Pepitas is using a temporary deck for now, and cards you add to it won't be kept. Your saved cards haven't been deleted. Try quitting and reopening the app.")
         }
     }
 }

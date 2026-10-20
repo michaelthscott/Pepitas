@@ -13,16 +13,33 @@ import SwiftData
     let container: ModelContainer
     var cards: [Card] = []
     @ObservationIgnored var index: Array<Card>.Index = 0
-    
-    init(isStoredInMemoryOnly: Bool = false) {
+
+    /// Why the stored cards couldn't be opened, when the deck has fallen back to a temporary
+    /// in-memory store. Cards added in that state aren't kept after the app quits.
+    private(set) var storeError: (any Error)?
+
+    /// - Parameter url: Where to keep the store, instead of the default location. Used by tests.
+    init(isStoredInMemoryOnly: Bool = false, url: URL? = nil) {
         let schema = Schema(versionedSchema: PepitasMigrationPlan.currentSchema)
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: isStoredInMemoryOnly)
+        let modelConfiguration = if let url {
+            ModelConfiguration(schema: schema, url: url)
+        } else {
+            ModelConfiguration(schema: schema, isStoredInMemoryOnly: isStoredInMemoryOnly)
+        }
         do {
             container = try ModelContainer(for: schema, migrationPlan: PepitasMigrationPlan.self, configurations: [modelConfiguration])
-            loadStoredCards()
         } catch {
-            fatalError("Could not create ModelContainer: \(error)")
+            // Rather than crash on every launch, carry on with an empty temporary deck and
+            // let the UI explain. The store on disk is left untouched, so nothing is lost.
+            print("Could not open the stored cards, using a temporary deck: \(error)")
+            storeError = error
+            do {
+                container = try ModelContainer(for: schema, configurations: [ModelConfiguration(schema: schema, isStoredInMemoryOnly: true)])
+            } catch {
+                fatalError("Could not create an in-memory ModelContainer: \(error)")
+            }
         }
+        loadStoredCards()
     }
 
     var isEmpty: Bool { cards.isEmpty }
