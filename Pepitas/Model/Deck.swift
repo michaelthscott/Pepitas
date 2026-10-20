@@ -52,9 +52,11 @@ import SwiftData
         index = cards.startIndex
     }
     
-    func addCardIfNew(_ card: Card) {
-        guard !cards.contains(card) else { return }
-        container.mainContext.insert(card)
+    /// Saves `card`, adding it to the deck first if it's new.
+    func save(_ card: Card) {
+        if !cards.contains(card) {
+            container.mainContext.insert(card)
+        }
         do {
             try container.mainContext.save()
             loadStoredCards()

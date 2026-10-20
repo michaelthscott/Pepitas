@@ -48,7 +48,9 @@ struct DeckSplitView: View {
             }
         }
         .sheet(isPresented: $createNewCard) {
-            CardEditor(card: Card())
+            NavigationStack {
+                CardEditor(card: Card())
+            }
         }
     }
 }

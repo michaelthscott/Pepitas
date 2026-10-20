@@ -64,6 +64,23 @@ struct CardEditor: View {
                 }
             }
         }
+        .navigationTitle(isNew ? "New Card" : "Edit Card")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            if isNew {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel", role: .cancel) {
+                        dismiss()
+                    }
+                }
+            }
+            ToolbarItem(placement: .confirmationAction) {
+                Button("Save", action: saveAndDismiss)
+                    .disabled(!isValid)
+            }
+        }
+        // Don't let a swipe silently throw away a new card that has been started.
+        .interactiveDismissDisabled(isNew && hasChanges)
         .onAppear {
             front = card.front
             back = card.back
@@ -71,8 +88,23 @@ struct CardEditor: View {
         }
         .onDisappear {
             translation?.cancel()
+            // Leaving an existing card keeps the edits; leaving a new one is a cancel.
+            if !isNew {
+                saveIfChanged()
+            }
         }
     }
+
+    /// Whether the card hasn't been added to the deck yet.
+    private var isNew: Bool { !deck.cards.contains(card) }
+
+    private var trimmedFront: String { front.trimmingCharacters(in: .whitespacesAndNewlines) }
+    private var trimmedBack: String { back.trimmingCharacters(in: .whitespacesAndNewlines) }
+
+    /// A card needs both sides before it can be saved.
+    private var isValid: Bool { !trimmedFront.isEmpty && !trimmedBack.isEmpty }
+
+    private var hasChanges: Bool { trimmedFront != card.front || trimmedBack != card.back }
 
     /// Moves on to the back of the card and translates the front.
     private func submitFront() {
@@ -80,12 +112,28 @@ struct CardEditor: View {
         translate()
     }
 
-    /// Saves the card and closes the editor.
+    /// Saves the card and closes the editor, or moves to whichever side is still empty.
     private func submitBack() {
-        card.front = front
-        card.back = back
-        deck.addCardIfNew(card)
+        if trimmedFront.isEmpty {
+            focusedField = .front
+        } else if trimmedBack.isEmpty {
+            focusedField = .back
+        } else {
+            saveAndDismiss()
+        }
+    }
+
+    private func saveAndDismiss() {
+        saveIfChanged()
         dismiss()
+    }
+
+    /// Writes the edits to the card and saves it, as long as both sides are filled in.
+    private func saveIfChanged() {
+        guard isValid, hasChanges || isNew else { return }
+        card.front = trimmedFront
+        card.back = trimmedBack
+        deck.save(card)
     }
 
     /// Fills in the back of the card with a Portuguese translation of the front.
