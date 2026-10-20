@@ -4,7 +4,7 @@ title: Pepitas Support
 
 # Pepitas Support
 
-For help with Pepitas, or to report a problem, email [CONTACT EMAIL].
+For help with Pepitas, or to report a problem, email [pepitas@michaelthscott.org](mailto:pepitas@michaelthscott.org).
 
 ## Common questions
 

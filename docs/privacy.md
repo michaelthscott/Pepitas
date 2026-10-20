@@ -30,4 +30,4 @@ Pepitas is bought through the App Store. Apple handles the purchase, and the app
 
 ## Contact
 
-Questions about this policy: [CONTACT EMAIL]
+Questions about this policy: [pepitas@michaelthscott.org](mailto:pepitas@michaelthscott.org)
