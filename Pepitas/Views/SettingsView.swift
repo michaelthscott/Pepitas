@@ -16,6 +16,16 @@ struct SettingsView: View {
         authKey.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
+    /// The marketing version, such as "1.0", from the bundle's Info.plist.
+    private var appVersion: String {
+        Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "Unknown"
+    }
+
+    /// The build number from the bundle's Info.plist.
+    private var buildNumber: String {
+        Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "Unknown"
+    }
+
     var body: some View {
         NavigationStack {
             Form {
@@ -42,6 +52,11 @@ struct SettingsView: View {
                         deepL.authKey = ""
                     }
                     .disabled(!deepL.isConfigured)
+                }
+
+                Section("About") {
+                    LabeledContent("Version", value: appVersion)
+                    LabeledContent("Build", value: buildNumber)
                 }
             }
             .navigationTitle("Settings")
