@@ -204,11 +204,12 @@
     "MTL_FAST_MATH": "YES",
     "ONLY_ACTIVE_ARCH[config=Debug]": "YES",
     "SDKROOT": "iphoneos",
+    "STRING_CATALOG_GENERATE_SYMBOLS": "YES",
     "SWIFT_ACTIVE_COMPILATION_CONDITIONS[config=Debug]": "DEBUG $(inherited)",
     "SWIFT_COMPILATION_MODE[config=Release]": "wholemodule",
     "SWIFT_OPTIMIZATION_LEVEL[config=Debug]": "-Onone",
     "VALIDATE_PRODUCT[config=Release]": "YES",
   },
-  "last-upgrade": "27.0",
+  "last-upgrade": "27.2",
   "last-swift-update": "27.0",
 }
